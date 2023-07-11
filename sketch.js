@@ -1,28 +1,21 @@
-
-// Global variable to store the gallery object. The gallery object is
-// a container for all the visualisations.
-var gallery;
+let gallery;
+let config;
 
 function setup() {
   // Create a canvas to fill the content div from index.html.
-  canvasContainer = select('#app');
-  var c = createCanvas(1024, 576);
+  let canvasContainer = select('#app');
+  let {width, height} = canvasContainer.size();
+  let c = createCanvas(width, height);
   c.parent('app');
 
-  // Create a new gallery object.
   gallery = new Gallery();
-
-  // Add the visualisation objects here.
-  gallery.addVisual(new TechDiversityRace());
-  gallery.addVisual(new TechDiversityGender());
-  gallery.addVisual(new PayGapByJob2017());
-  gallery.addVisual(new PayGapTimeSeries());
-  gallery.addVisual(new ClimateChange());
+  gallery.addReport(new Report('"Organized Crime: Ecuador?"', 'There'));
+  gallery.addReport(new Report('Report 2', 'There'));
 }
 
 function draw() {
-  background(255);
-  if (gallery.selectedVisual != null) {
-    gallery.selectedVisual.draw();
+  background("#070A0F");
+  if (gallery.selectedReport != null) {
+    gallery.selectedReport.draw();
   }
 }
