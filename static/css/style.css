@@ -1,0 +1,88 @@
+:root {
+    --bg-color: #070A0F;
+    --ui-font-color: #75FFC6;
+    --ui-font-color-transparent: #75ffc61f;
+    --gray-color: #454646;
+    --white-color: #FFFFFF;
+}
+/* CSS Reset */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: monospace;
+}
+
+/* Set rem units to 16px */
+html {
+    font-size: 16px;
+}
+
+body {
+    background-color: var(--bg-color);
+    font-family: monospace;
+    color: var(--white-color);
+}
+
+#visuals-menu {
+    position: fixed;
+    right: 1rem;
+    width: 15vw;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    color: var(--ui-font-color);
+    font-size: 0.8rem;
+}
+
+.menu-item {
+    width: 100%;
+    min-height: 3rem;
+    border: 0.1rem solid var(--gray-color);
+    background-color: var(--bg-color);
+    list-style-type: none;
+    margin: 0.5rem;
+    display: flex;
+    align-items: center;
+    font-weight: bold;
+    font-size: 1.2rem;
+    margin-left: 1rem;
+}
+
+.hover {
+    background: var(--ui-font-color);
+    color: var(--bg-color);
+}
+
+.selected{
+    border: 0.2rem solid var(--ui-font-color);
+    margin-left: 0;
+}
+
+#app {
+    width: 60vw;
+    height: 90vh;
+    margin: auto;
+}
+
+.container {
+  display: flex;
+}
+
+select {
+    min-height: 2rem;
+    border: 0.1rem solid var(--gray-color);
+    background-color: var(--bg-color);
+    display: flex;
+    align-items: center;
+    font-weight: bold;
+    color: var(--ui-font-color);
+    font-size: 1.2rem;
+    margin-left: 1rem;
+}
+
+option {
+    background-color: var(--bg-color);
+}
